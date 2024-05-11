@@ -1,0 +1,16 @@
+﻿@model Category
+
+<h1>@Model.Name</h1>
+
+
+<form asp-action="AddTag" asp-controller="Category" method="post">
+            <input type="text" name="id" value="@Model.Id" hidden />
+    @foreach (Tag tag in ViewBag.Tags)
+    {
+        <div>
+            <label for="@tag.Name">@tag.Name</label>
+            <input type="checkbox" id="@tag.Name" name="tags" value="@tag.Id" />
+        </div>
+    }
+    <button type="submit">Submit</button>
+</form>

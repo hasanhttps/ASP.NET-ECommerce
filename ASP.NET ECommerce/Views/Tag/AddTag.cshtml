@@ -1,0 +1,29 @@
+﻿@model Tag
+
+<div class="row">
+
+    <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Add Category</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form asp-controller="Tag" asp-action="AddTag" method="post">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Category</label>
+                        <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Enter Tag">
+                    </div>
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
