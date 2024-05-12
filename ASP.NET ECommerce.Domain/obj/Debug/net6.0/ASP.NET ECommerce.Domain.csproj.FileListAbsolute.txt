@@ -11,3 +11,4 @@ C:\Users\hasan\source\repos\ASP.NET ECommerce\ASP.NET ECommerce.Domain\obj\Debug
 C:\Users\hasan\source\repos\ASP.NET ECommerce\ASP.NET ECommerce.Domain\obj\Debug\net6.0\ref\ASP.NET ECommerce.Domain.dll
 C:\Users\hasan\source\repos\ASP.NET ECommerce\ASP.NET ECommerce.Domain\bin\Debug\net6.0\ASP.NET ECommerce.Domain.runtimeconfig.json
 C:\Users\hasan\source\repos\ASP.NET ECommerce\ASP.NET ECommerce.Domain\obj\Debug\net6.0\ASP.NET ECommerce.Domain.genruntimeconfig.cache
+C:\Users\hasan\source\repos\ASP.NET ECommerce\ASP.NET ECommerce.Domain\obj\Debug\net6.0\ASP.NET ECommerce.Domain.sourcelink.json

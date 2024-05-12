@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ASP.NET_ECommerce.Domain.Entities.Concretes;
 using ASP.NET_ECommerce.DataAccess.Reposiotries.Abstracts;
 
 namespace ASP.NET_ECommerce.MVC.Controllers {
@@ -6,18 +7,31 @@ namespace ASP.NET_ECommerce.MVC.Controllers {
 
         private readonly ITagRepository _TagRepository;
         private readonly IProductRepository _productRepository;
+        private readonly ICategoryRepository _categoryRepository;
 
-        public ProductController(IProductRepository productRepository, ITagRepository tagRepository) {
+        public ProductController(ICategoryRepository categoryRepository, IProductRepository productRepository, ITagRepository tagRepository) {
+            _categoryRepository = categoryRepository;
             _productRepository = productRepository;
             _TagRepository = tagRepository;
         }
 
-        public IActionResult AddProduct() {
+        [HttpGet]
+        public async Task<IActionResult> AddProduct() {
             return View();
         }
 
-        public IActionResult GetAllProducts() {
-            return View();
+        [HttpPost]
+        public async Task<IActionResult> AddProduct(Product product) {
+            var category = await _categoryRepository.GetByIdAsync(product.CategoryId);
+            product.Category = category;
+            _productRepository.AddAsync(product);
+            category.Products.Add(product);
+            _categoryRepository.Update(category);
+            return View(product);
+        }
+
+        public async Task<IActionResult> GetAllProducts() {
+            return View(await _productRepository.GetAllAsync());
         }
 
         public async Task<IActionResult> AllTags() {

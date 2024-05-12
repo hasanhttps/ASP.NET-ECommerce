@@ -33,26 +33,33 @@ public class CategoryController : Controller {
     }
 
     public async Task<IActionResult> AllTags() {
-        return View();
+        var categories = await _categoryRepository.GetAllAsync();
+        var categoryTags = new List<CategoryTag>();
+        foreach(var category in categories) {
+            var categoryTag = new CategoryTag();
+            categoryTag.Tags = new List<Tag>();
+            categoryTag.Category = category;
+            foreach(var tag in category.Tags) {
+                categoryTag.Tags.Add(tag);
+            }
+            if (categoryTag.Tags.Count != 0) categoryTags.Add(categoryTag);
+        }
+        return View(categoryTags);
     }
 
     [HttpGet]
-    public async Task<IActionResult> AddTag(int id) {
-        var category = await _categoryRepository.GetByIdAsync(id);
-        ViewBag.Tags = await _TagRepository.GetAllAsync();
-        return View(category);
+    public async Task<IActionResult> AddTag() {
+        return View(new CategoryTag());
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddTag(int id, int[] tags) {
-        var category = await _categoryRepository.GetByidWithTags(id);
-
-        foreach (var tagId in tags) {
-            var tag = await _TagRepository.GetByIdAsync(tagId);
-            category.Tags.Add(tag);
-        }
-
-        await _categoryRepository.SaveChanges();
-        return RedirectToAction("AddTag");
+    public async Task<IActionResult> AddTag(CategoryTag categoryTag) {
+         var category = await _categoryRepository.GetByIdAsync(categoryTag.CategoryId);
+        category.Tags.Add(await _TagRepository.GetByIdAsync(categoryTag.TagId));
+        var tag = await _TagRepository.GetByIdAsync(categoryTag.TagId);
+        tag.Categories.Add(await _categoryRepository.GetByIdAsync(categoryTag.CategoryId));
+        _categoryRepository.Update(category);
+        _TagRepository.Update(tag);
+        return View(categoryTag);
     }
 }

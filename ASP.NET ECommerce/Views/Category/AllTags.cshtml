@@ -1,1 +1,8 @@
-﻿
+﻿@model List<CategoryTag>
+
+@foreach (CategoryTag categoryTag in Model) {
+    <h2>Category Name: @categoryTag.Category.Name</h2>
+    @foreach(Tag tag in categoryTag.Tags) {
+        <p>Tag Name: @tag.Name</p>
+    }
+}

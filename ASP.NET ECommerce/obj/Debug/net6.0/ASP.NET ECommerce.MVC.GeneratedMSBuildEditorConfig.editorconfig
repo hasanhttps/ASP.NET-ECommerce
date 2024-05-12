@@ -82,12 +82,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hasan/source/repos/ASP.NET ECommerce/ASP.NET ECommerce/Views/Tag/AddProductTag.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXEFkZFByb2R1Y3RUYWcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/hasan/source/repos/ASP.NET ECommerce/ASP.NET ECommerce/Views/Tag/AddTag.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXEFkZFRhZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hasan/source/repos/ASP.NET ECommerce/ASP.NET ECommerce/Views/Tag/AllTags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXEFsbFRhZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hasan/source/repos/ASP.NET ECommerce/ASP.NET ECommerce/Views/_ViewImports.cshtml]

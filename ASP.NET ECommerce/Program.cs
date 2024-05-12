@@ -12,7 +12,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(options => {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("default"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("default")).UseLazyLoadingProxies();
 });
 
 

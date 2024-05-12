@@ -15,3 +15,4 @@ C:\Users\hasan\source\repos\ASP.NET ECommerce\ASP.NET ECommerce.DataAccess\obj\D
 C:\Users\hasan\source\repos\ASP.NET ECommerce\ASP.NET ECommerce.DataAccess\obj\Debug\net6.0\ASP.NET ECommerce.DataAccess.pdb
 C:\Users\hasan\source\repos\ASP.NET ECommerce\ASP.NET ECommerce.DataAccess\obj\Debug\net6.0\ASP.NET ECommerce.DataAccess.genruntimeconfig.cache
 C:\Users\hasan\source\repos\ASP.NET ECommerce\ASP.NET ECommerce.DataAccess\obj\Debug\net6.0\ref\ASP.NET ECommerce.DataAccess.dll
+C:\Users\hasan\source\repos\ASP.NET ECommerce\ASP.NET ECommerce.DataAccess\obj\Debug\net6.0\ASP.NET ECommerce.DataAccess.sourcelink.json

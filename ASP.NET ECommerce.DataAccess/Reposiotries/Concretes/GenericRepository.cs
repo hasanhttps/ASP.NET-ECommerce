@@ -1,8 +1,7 @@
-﻿using ASP.NET_ECommerce.DataAccess.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using ASP.NET_ECommerce.DataAccess.Contexts;
 using ASP.NET_ECommerce.DataAccess.Reposiotries.Abstracts;
 using ASP.NET_ECommerce.Domain.Entities.Abstracts;
-using ASP.NET_ECommerce.Domain.Entities.Concretes;
-using Microsoft.EntityFrameworkCore;
 
 namespace ASP.NET_ECommerce.DataAccess.Reposiotries.Concretes;
 

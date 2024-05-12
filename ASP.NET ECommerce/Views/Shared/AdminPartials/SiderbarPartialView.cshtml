@@ -44,6 +44,23 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a asp-controller="Category" asp-action="GetAllCategory" class="nav-link">
+                        <i class="fas fa-yin-yang"></i>
+                        <p>
+                            Categories
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a asp-controller="Category" asp-action="AddCategory" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Add Category
+                        </p>
+                    </a>
+                </li>
 
                 <li class="nav-item">
                     <a asp-controller="Product" asp-action="GetAllProducts" class="nav-link">
@@ -97,21 +114,20 @@
                     </a>
                 </li>
 
-
                 <li class="nav-item">
-                    <a asp-controller="Category" asp-action="GetAllCategory" class="nav-link">
-                        <i class="fas fa-yin-yang"></i>
+                    <a asp-controller="Tag" asp-action="AddTag" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
                         <p>
-                            Categories
+                            Add Tag
                         </p>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a asp-controller="Category" asp-action="AddCategory" class="nav-link">
+                    <a asp-controller="Tag" asp-action="AllTags" class="nav-link">
                         <i class="nav-icon far fa-image"></i>
                         <p>
-                            AddCategory
+                            All Tags
                         </p>
                     </a>
                 </li>
